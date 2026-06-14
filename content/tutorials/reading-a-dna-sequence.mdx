@@ -1,42 +1,47 @@
+import DnaHelix from '@/components/tutorials/DnaHelix'
+import SequenceViewer from '@/components/tutorials/SequenceViewer'
+import CodonTranslator from '@/components/tutorials/CodonTranslator'
+import BaseComposition from '@/components/tutorials/BaseComposition'
+
 DNA is written in an alphabet of just four letters — **A**, **T**, **G**, and
 **C** — representing the nucleotides adenine, thymine, guanine, and cytosine.
 Everything from a protein's shape to a crop's nitrogen-use efficiency is
 ultimately encoded in long strings of these four characters.
 
+<DnaHelix sequence="ATGGCATTACGTGACTTCGGC" />
+
 ## The double helix, as text
 
-A short stretch of DNA might look like this:
+The two strands of DNA are **complementary**: A always pairs with T, and G
+always pairs with C. Given one strand, you can always reconstruct the other —
+try editing the sequence below and hover any base to see its partner.
 
-```text
-5'- A T G G C A T T A C G T -3'
-3'- T A C C G T A A T G C A -5'
-```
-
-The two strands are **complementary**: A always pairs with T, and G always
-pairs with C. Given one strand, you can always reconstruct the other.
+<SequenceViewer initial="ATGGCATTACGT" />
 
 ## Reading frames
 
 Ribosomes read DNA (via messenger RNA) three letters at a time. Each triplet —
-a **codon** — specifies an amino acid:
+a **codon** — specifies an amino acid. `ATG` is special: it's the **start
+codon** that signals where translation begins, and `TAA`, `TAG`, `TGA` are
+**stop codons**.
 
-```text
-ATG  GCA  TTA  CGT
-Met  Ala  Leu  Arg
-```
+Shift the reading frame below and watch how completely the encoded protein
+changes — a single-base shift rewrites everything downstream.
 
-`ATG` is special: it's the **start codon** that signals where translation
-begins.
+<CodonTranslator initial="ATGGCATTACGTTAA" />
+
+## Sequence composition
+
+Not all sequences are alike. The proportion of G and C bases — the **GC
+content** — influences DNA stability and is one of the first things a
+bioinformatician checks when characterising a genome.
+
+<BaseComposition initial="ATGGCATTACGTGACTTCGGCGCTA" />
 
 ## What's next
 
-This page is intentionally simple prose. Because the site is built on Next.js,
-future versions of this tutorial can embed **interactive React components**
-directly here — for example:
-
-- a live sequence viewer that highlights codons as you hover,
-- a 3D protein-structure widget (NGL Viewer),
-- a genome-track browser (igv.js).
-
-Those components will drop straight into this MDX file with no change to the
-site architecture.
+These widgets are plain React components embedded directly in this Markdown
+file — no change to the site's architecture. The same approach scales up to
+richer tools: a 3D protein-structure viewer (NGL Viewer), a genome-track
+browser (igv.js), or interactive phylogenetic trees, all of which can drop
+straight into future tutorials.

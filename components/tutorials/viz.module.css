@@ -1,0 +1,182 @@
+.widget {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #fff;
+  margin: 1.75rem 0;
+}
+
+.widgetTitle {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--step-1);
+  margin: 0 0 0.25rem;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  margin: 0 0 1rem;
+  max-width: none;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex: 1 1 220px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: var(--step-0);
+  letter-spacing: 0.12em;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+.input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.btn {
+  font-size: var(--step--1);
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn[data-active='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Sequence / base-pair viewer */
+.strands {
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+}
+.strand {
+  display: flex;
+  gap: 4px;
+  margin: 2px 0;
+}
+.strandLabel {
+  font-family: ui-monospace, monospace;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+}
+.base {
+  width: 30px;
+  height: 34px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  color: #fff;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  font-size: var(--step-0);
+  cursor: default;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.base[data-active='true'] {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.rungs {
+  display: flex;
+  gap: 4px;
+  height: 14px;
+}
+.rung {
+  width: 30px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* Codon translator */
+.codons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.codon {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem 0.45rem;
+  text-align: center;
+  min-width: 58px;
+  background: var(--bg);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+.codon:hover { transform: translateY(-2px); border-color: var(--accent); }
+.codon[data-start='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, #fff); }
+.codon[data-stop='true'] { border-color: var(--bg-subtle); background: #fbe9e6; }
+.codonBases {
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.codonAa {
+  display: block;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.protein {
+  margin-top: 1rem;
+  font-family: ui-monospace, monospace;
+  word-break: break-all;
+  background: var(--bg-subtle);
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-size: var(--step-0);
+}
+
+/* Composition bars */
+.compRow {
+  display: grid;
+  grid-template-columns: 24px 1fr 56px;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
+}
+.compLabel { font-family: ui-monospace, monospace; font-weight: 600; }
+.compTrack {
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  height: 14px;
+  overflow: hidden;
+}
+.compFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.compVal { font-size: var(--step--1); color: var(--text-muted); text-align: right; }
+.gc {
+  margin-top: 0.75rem;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.gc strong { color: var(--accent); font-size: var(--step-0); }
+
+/* Animated helix */
+.helixWrap { display: grid; place-items: center; margin: 0.5rem 0 0.25rem; }
+.helix .pair { animation: fade 0.6s ease both; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .helix .strand1, .helix .strand2 { animation: none !important; }
+}
