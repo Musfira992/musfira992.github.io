@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #fff;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: var(--step-1);
+}
+
+.desc {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.tags {
+  margin: 0;
+  max-width: none;
+}
