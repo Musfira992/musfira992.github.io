@@ -7,8 +7,9 @@ export default function About() {
     <article>
       <h1>About</h1>
       <p className="lede">
-        I&apos;m a Technical Operations Specialist &amp; Researcher with a strong
-        background in plant biology, molecular genetics, and R&amp;D operations.
+        I have expertise in the data engineering aspects of bioinformatics and
+        professional experience with a strong background in plant biology,
+        molecular genetics, and R&amp;D operations.
       </p>
 
       <p>
