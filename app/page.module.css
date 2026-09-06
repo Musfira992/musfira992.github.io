@@ -12,14 +12,18 @@
 
 .heroMedia {
   justify-self: end;
+  width: 100%;
+  max-width: 220px;
 }
 
 .heroImage {
   width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
-  border-radius: 12px;
+  border-radius: 50%;
   display: block;
   object-fit: cover;
+  object-position: center 20%;
   box-shadow: 0 8px 24px rgba(26, 26, 24, 0.08);
 }
 
@@ -31,6 +35,6 @@
 
   .heroMedia {
     justify-self: start;
-    max-width: 200px;
+    max-width: 180px;
   }
 }
