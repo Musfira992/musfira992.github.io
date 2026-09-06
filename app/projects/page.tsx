@@ -33,11 +33,12 @@ export default function Projects() {
       <h1>Projects</h1>
       <p className="lede">
         Selected work across crop science, spatial analysis, and data-driven
-        research — write-ups first, then the Master&apos;s thesis gallery.
+        research — research projects first, then the Master&apos;s thesis
+        gallery.
       </p>
 
       <div className={styles.more}>
-        <h2>Writing &amp; tutorials</h2>
+        <h2>Research projects</h2>
 
         <p>
           <Link
