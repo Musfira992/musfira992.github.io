@@ -4,6 +4,35 @@ import styles from './projects.module.css'
 
 export const metadata: Metadata = { title: 'Projects' }
 
+const researchProjects = [
+  {
+    href: '/blog/enhancing-nutrient-use-efficiency-for-sustainable-agriculture',
+    title: 'Enhancing Nutrient Use Efficiency for Sustainable Agriculture',
+    description:
+      'Real-world challenges in improving nutrient use efficiency, and statistical models for quantifying nitrogen responsiveness (Chapter 2).',
+    thumb: '/images/projects/thumb-nue.jpg',
+    thumbAlt: 'Golden wheat field under cloudy sky',
+  },
+  {
+    href: '/blog/comparative-assessment-of-soil-fertility-geostatistics',
+    title:
+      'Comparative Assessment of Soil Fertility Parameters Using Geostatistical Approaches',
+    description:
+      'Comparing multiple linear regression with ordinary kriging, cokriging, and regression kriging for mapping soil fertility — and what that means for sampling design (Chapter 3).',
+    thumb: '/images/projects/thumb-soil.jpg',
+    thumbAlt: 'Young crops growing in soil between rows',
+  },
+  {
+    href: '/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration',
+    title:
+      'Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution',
+    description:
+      'Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.',
+    thumb: '/images/projects/thumb-rna.jpg',
+    thumbAlt: 'Laboratory microscopes on a research bench',
+  },
+]
+
 const thesisGallery = [
   {
     src: '/images/projects/field-sampling.jpg',
@@ -40,48 +69,30 @@ export default function Projects() {
       <div className={styles.more}>
         <h2>Research projects</h2>
 
-        <p>
-          <Link
-            href="/blog/enhancing-nutrient-use-efficiency-for-sustainable-agriculture"
-            className="button"
-          >
-            Enhancing Nutrient Use Efficiency for Sustainable Agriculture →
-          </Link>
-        </p>
-        <p className="muted">
-          Real-world challenges in improving nutrient use efficiency, and
-          statistical models for quantifying nitrogen responsiveness
-          (Chapter&nbsp;2).
-        </p>
-
-        <p>
-          <Link
-            href="/blog/comparative-assessment-of-soil-fertility-geostatistics"
-            className="button"
-          >
-            Comparative Assessment of Soil Fertility Parameters Using
-            Geostatistical Approaches →
-          </Link>
-        </p>
-        <p className="muted">
-          Comparing multiple linear regression with ordinary kriging,
-          cokriging, and regression kriging for mapping soil fertility — and
-          what that means for sampling design (Chapter&nbsp;3).
-        </p>
-
-        <p>
-          <Link
-            href="/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration"
-            className="button"
-          >
-            Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution
-            →
-          </Link>
-        </p>
-        <p className="muted">
-          Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and
-          mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.
-        </p>
+        <div className={styles.projectList}>
+          {researchProjects.map((project) => (
+            <article key={project.href} className={styles.projectItem}>
+              <Link href={project.href} className={styles.projectThumbLink}>
+                <img
+                  src={project.thumb}
+                  alt={project.thumbAlt}
+                  className={styles.projectThumb}
+                  loading="lazy"
+                />
+              </Link>
+              <div className={styles.projectBody}>
+                <p>
+                  <Link href={project.href} className="button">
+                    {project.title} →
+                  </Link>
+                </p>
+                <p className={`muted ${styles.projectDesc}`}>
+                  {project.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
 
       <div className={styles.projectBlock}>
