@@ -33,39 +33,8 @@ export default function Projects() {
       <h1>Projects</h1>
       <p className="lede">
         Selected work across crop science, spatial analysis, and data-driven
-        research — starting with my Master&apos;s thesis.
+        research — write-ups first, then the Master&apos;s thesis gallery.
       </p>
-
-      <div className={styles.projectBlock}>
-        <h2>Master&apos;s thesis — Nitrogen use efficiency</h2>
-        <p>
-          Dedicated to examining nitrogen use efficiency estimations and
-          spatial heterogeneity in crop fields across Central Alberta.
-        </p>
-
-        <div className={styles.gallery}>
-          {thesisGallery.map((item) => (
-            <figure key={item.src} className={styles.card}>
-              <img src={item.src} alt={item.caption} loading="lazy" />
-              <figcaption>{item.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
-
-        <p>
-          <a href="https://ualberta.scholaris.ca/items/23bdbfc3-c9ad-453e-8940-219eab399e6c">
-            Read the full thesis on the University of Alberta repository →
-          </a>
-        </p>
-        <p className="muted">
-          <em>
-            Statistical and In-field Challenges Involved in Quantifying Crop
-            Nitrogen Use Efficiency (NUE) and Spatial Soil Fertility in Central
-            Alberta
-          </em>
-          , University of Alberta, 2019.
-        </p>
-      </div>
 
       <div className={styles.more}>
         <h2>Writing &amp; tutorials</h2>
@@ -111,6 +80,37 @@ export default function Projects() {
         <p className="muted">
           Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and
           mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.
+        </p>
+      </div>
+
+      <div className={styles.projectBlock}>
+        <h2>Master&apos;s thesis — Nitrogen use efficiency</h2>
+        <p>
+          Dedicated to examining nitrogen use efficiency estimations and
+          spatial heterogeneity in crop fields across Central Alberta.
+        </p>
+
+        <div className={styles.gallery}>
+          {thesisGallery.map((item) => (
+            <figure key={item.src} className={styles.card}>
+              <img src={item.src} alt={item.caption} loading="lazy" />
+              <figcaption>{item.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <p>
+          <a href="https://ualberta.scholaris.ca/items/23bdbfc3-c9ad-453e-8940-219eab399e6c">
+            Read the full thesis on the University of Alberta repository →
+          </a>
+        </p>
+        <p className="muted">
+          <em>
+            Statistical and In-field Challenges Involved in Quantifying Crop
+            Nitrogen Use Efficiency (NUE) and Spatial Soil Fertility in Central
+            Alberta
+          </em>
+          , University of Alberta, 2019.
         </p>
       </div>
     </section>
