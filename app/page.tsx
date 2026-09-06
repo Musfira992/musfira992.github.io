@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import ResearchGallery from '@/components/home/ResearchGallery'
 import ResearchTabs from '@/components/home/ResearchTabs'
 import styles from './page.module.css'
 
@@ -36,7 +35,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ResearchGallery />
       <ResearchTabs />
     </>
   )
