@@ -13,6 +13,10 @@ export const primerGroups: PrimerGroup[] = [
   {
     category: 'DataBricks Series',
     items: [
+      {
+        name: 'AI Drug Discovery Made Easy: Your Complete Guide to Chemprop on Databricks',
+        href: '/blog/chemprop-drug-discovery-on-databricks',
+      },
       { name: '3 common Data Modeling Techniques' },
       { name: 'Dimensional modeling and Kimball Architecture' },
       { name: 'SQL Fundamentals in Databricks', href: '/blog/databricks-series-sql-fundamentals' },
