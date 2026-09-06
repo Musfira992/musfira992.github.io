@@ -98,6 +98,20 @@ export default function Projects() {
           cokriging, and regression kriging for mapping soil fertility — and
           what that means for sampling design (Chapter&nbsp;3).
         </p>
+
+        <p>
+          <Link
+            href="/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration"
+            className="button"
+          >
+            Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution
+            →
+          </Link>
+        </p>
+        <p className="muted">
+          Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and
+          mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.
+        </p>
       </div>
     </section>
   )
