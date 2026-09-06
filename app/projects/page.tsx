@@ -82,19 +82,6 @@ export default function Projects() {
           Real-world challenges in improving nutrient use efficiency, and
           statistical models for quantifying nitrogen responsiveness.
         </p>
-
-        <p>
-          <Link
-            href="/blog/chemprop-drug-discovery-on-databricks"
-            className="button"
-          >
-            Chemprop on Databricks — AI drug discovery notes →
-          </Link>
-        </p>
-        <p className="muted">
-          Using Chemprop for molecular property prediction as a managed
-          Databricks workflow.
-        </p>
       </div>
     </section>
   )
