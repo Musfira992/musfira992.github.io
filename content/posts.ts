@@ -1,1 +1,1 @@
-@/workspace/primer-posts/posts.merged.ts
+FILE_CONTENT_FROM:/workspace/primer-posts/posts.merged.ts
