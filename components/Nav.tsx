@@ -3,7 +3,6 @@ import styles from './Nav.module.css'
 
 const links = [
   { href: '/about', label: 'About' },
-  { href: '/cv', label: 'CV' },
   { href: '/projects', label: 'Projects' },
   { href: '/resources', label: 'Resources' },
   { href: '/blog', label: 'Blog Posts' },
