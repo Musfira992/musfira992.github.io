@@ -11,7 +11,7 @@ const researchProjects = [
     description:
       'Real-world challenges in improving nutrient use efficiency, and statistical models for quantifying nitrogen responsiveness (Chapter 2).',
     thumb: '/images/projects/thumb-nue.jpg',
-    thumbAlt: 'Golden wheat field under cloudy sky',
+    thumbAlt: 'Variable nitrogen rate map from NUE field analysis',
   },
   {
     href: '/blog/comparative-assessment-of-soil-fertility-geostatistics',
@@ -20,7 +20,7 @@ const researchProjects = [
     description:
       'Comparing multiple linear regression with ordinary kriging, cokriging, and regression kriging for mapping soil fertility — and what that means for sampling design (Chapter 3).',
     thumb: '/images/projects/thumb-soil.jpg',
-    thumbAlt: 'Young crops growing in soil between rows',
+    thumbAlt: 'Management zones map from soil fertility geostatistics',
   },
   {
     href: '/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration',
@@ -29,7 +29,7 @@ const researchProjects = [
     description:
       'Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.',
     thumb: '/images/projects/thumb-rna.jpg',
-    thumbAlt: 'Laboratory microscopes on a research bench',
+    thumbAlt: 'PCA plot of GSE283652 Npy1r WT versus KO samples',
   },
 ]
 
@@ -81,11 +81,12 @@ export default function Projects() {
                 />
               </Link>
               <div className={styles.projectBody}>
-                <p>
-                  <Link href={project.href} className="button">
-                    {project.title} →
-                  </Link>
-                </p>
+                <Link href={project.href} className={styles.projectTitle}>
+                  {project.title}
+                  <span className={styles.projectArrow} aria-hidden="true">
+                    →
+                  </span>
+                </Link>
                 <p className={`muted ${styles.projectDesc}`}>
                   {project.description}
                 </p>
