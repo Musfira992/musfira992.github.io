@@ -10,3 +10,13 @@
   border-bottom: 1px solid var(--border);
 }
 .item:last-child { border-bottom: none; }
+
+.guides {
+  margin: 2rem 0 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.guides h2 {
+  margin-top: 0;
+}
