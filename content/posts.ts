@@ -11,6 +11,50 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: 'mouse-pdac-rnaseq-npy1r-knockout-exploration',
+    title: 'Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution',
+    date: '2026-09-06',
+    category: 'project',
+    excerpt:
+      'A reproducible walkthrough of GSE283652 mouse PDAC RNA-seq — from GEO counts and edgeR QC/TMM normalisation to PCA and mouse immune deconvolution for an Npy1r knockout versus wild-type contrast.',
+    html: `<p>In this blog post, we begin with a bulk RNA-seq dataset from a mouse model of pancreatic ductal adenocarcinoma (PDAC). We introduce the analytical gap by showing that genotype contrasts alone rarely explain the dominant structure in tumour transcriptomes. We then walk through a reproducible exploration pipeline — from GEO data acquisition and count QC through filtering, TMM normalisation, PCA, and mouse-aware cell-type deconvolution. The post showcases the core exploratory findings for an <em>Npy1r</em> knockout versus wild-type contrast and explains why they matter for interpreting stromal and immune signals in PDAC. Finally, we conclude with practical implications for differential expression design and follow-up analyses.</p>
+<h2>Introduction and Background</h2>
+<p>Pancreatic ductal adenocarcinoma is a stroma-rich malignancy in which epithelial tumour cells coexist with cancer-associated fibroblasts (CAFs), immune infiltrates, and extracellular matrix. Bulk RNA-seq of tumour tissue therefore reflects a mixture of cell states, not a pure epithelial signal. When comparing genotypes — here, <em>Npy1r</em> knockout (KO) versus wild-type (WT) mice in a PDAC-relevant genetic background — it is essential to separate technical library effects, biological replicate noise, and cell-composition differences before interpreting gene-level contrasts.</p>
+<p>This project uses publicly available counts from GEO series <strong>GSE283652</strong> (<code>GSE283652_counts.csv</code>), with sample phenotype retrieved via the Bioconductor <code>GEOquery</code> package. The analysis is implemented in an RStudio project (<code>pancreatic.cancer.mouse.Rproj</code>) centred on a single workflow script, <code>Pancreatic.R</code>.</p>
+<h2>Problem Definition</h2>
+<p>Raw RNA-seq counts are heteroscedastic: genes with higher mean expression also show higher variance. Without filtering and between-sample normalisation, exploratory plots and clustering can be dominated by library-size and compositional artefacts. Even after normalisation, PCA may fail to separate KO from WT if the strongest axes of variation are driven by stromal content or other latent factors rather than genotype.</p>
+<p>This project asks: after a disciplined QC and normalisation workflow, do <em>Npy1r</em> KO and WT samples form distinct global expression clusters, and can mouse immune/stromal deconvolution help explain residual structure on the leading principal components?</p>
+<h2>Our Approach</h2>
+<h3>Data acquisition and metadata alignment</h3>
+<p>Counts were loaded from the GEO supplementary file and standardised to Ensembl IDs and gene symbols. Phenotype metadata were downloaded with <code>getGEO('GSE283652')</code> and wrangled with <code>dplyr</code>/<code>tidyr</code> to extract genotype and sample identifiers (KO vs WT). Critically, metadata row order was forced to match count-matrix column order with explicit <code>setequal</code>/<code>identical</code> checks — GEO phenoData order is not guaranteed to match supplementary count columns.</p>
+<h3>Exploratory QC, filtering, and normalisation</h3>
+<p>The workflow follows a standard edgeR-centred path:</p>
+<ul>
+<li>Convert counts to a numeric matrix and visualise mean–SD relationships to document heteroscedasticity in raw PDAC counts.</li>
+<li>Build a <code>DGEList</code>, compute log<sub>2</sub>-CPM, and inspect sample distributions with violin plots (unfiltered baseline).</li>
+<li>Filter lowly expressed genes (keepers with CPM &gt; 1 in at least 10 samples) to remove the zero-inflated bulge that distorts early plots.</li>
+<li>Apply <strong>TMM</strong> (<code>calcNormFactors</code>) to correct compositional bias beyond simple library-size scaling, then re-plot filtered + TMM-normalised log<sub>2</sub>-CPM distributions.</li>
+</ul>
+<p>Side-by-side violin panels (unfiltered → filtered → TMM) make the effect of each preprocessing step visually auditable.</p>
+<figure><img src="/images/research/mean-variance.png" alt="Mean-variance relationship in RNA-seq counts" /><figcaption>Mean–variance structure in count data — the heteroscedasticity that motivates filtering and modelling choices downstream.</figcaption></figure>
+<h3>Sample structure: clustering and PCA</h3>
+<p>Euclidean distances on transposed filtered, TMM-normalised log<sub>2</sub>-CPM were used for hierarchical clustering (Ward.D2 and complete linkage). Principal component analysis (<code>prcomp</code>) summarised global sample structure, with scree plots and PC1–PC2 scatterplots coloured by genotype, plus a “small multiples” view of loadings across PC1–PC8.</p>
+<figure><img src="/images/research/pca-plot.png" alt="PCA of filtered normalised samples" /><figcaption>PCA of filtered, normalised samples — used to assess whether genotype drives the dominant axes of variation.</figcaption></figure>
+<figure><img src="/images/research/mds-plot.png" alt="Sample structure MDS plot" /><figcaption>Sample-structure view complementary to PCA, highlighting how closely KO and WT libraries sit in expression space.</figcaption></figure>
+<h3>Deconvolution and PC diagnostics</h3>
+<p>To relate bulk profiles to cell composition, the workflow converts counts toward length-aware abundances (TPM via Ensembl exon lengths from <code>biomaRt</code> for <em>Mus musculus</em>) and explores deconvolution approaches, including EPIC and mouse-oriented <code>immunedeconv</code> / <strong>mMCP-counter</strong>. Cancer-associated fibroblast (CAF) and other cell-type scores were correlated with PC1 to test whether stromal or immune fractions explain the leading axis of sample variation.</p>
+<figure><img src="/images/research/deconvolution.png" alt="Cell-type deconvolution overview" /><figcaption>Deconvolution-style summary of cell-type signals — a bridge between bulk expression structure and tumour microenvironment composition.</figcaption></figure>
+<h2>Results Overview</h2>
+<p>Raw counts showed the expected mean–SD fan shape. Filtering removed genes with near-zero expression across samples, and TMM normalisation tightened between-sample log<sub>2</sub>-CPM distributions relative to the unfiltered baseline.</p>
+<p>On PCA, <strong>KO and WT groups did not form cleanly separated clusters</strong>: the WT cloud largely sat inside a broader KO ellipse, with substantial overlap. KO replicates also showed greater spread, including samples behaving as relative outliers. PC1 and PC2 together explained a modest fraction of total variance (on the order of ~17.5% and ~12% respectively in the recorded notes) — less than 30% combined — indicating that genotype is not a single dominant global effect under these conditions.</p>
+<p>Deconvolution diagnostics were then used to ask whether microenvironment scores track PC1. Correlating cell-type scores (including CAF) with PC coordinates provides a concrete way to decide whether a simple <code>~ genotype</code> differential expression design is defensible, or whether composition covariates should be considered in follow-up modelling.</p>
+<figure><img src="/images/research/volcano-ko-vs-wt.png" alt="Volcano plot Npy1r KO versus WT" /><figcaption>Downstream differential expression view (Npy1r KO vs WT) — the natural next step once exploratory structure and composition checks are in place.</figcaption></figure>
+<h2>Conclusion</h2>
+<p>This project converts a raw GEO PDAC mouse RNA-seq accession into a transparent exploratory narrative: acquire and align metadata carefully, visualise heteroscedasticity, filter and TMM-normalise with edgeR, then interrogate sample structure with clustering and PCA. For GSE283652, the leading global axes do not cleanly separate <em>Npy1r</em> KO from WT, and KO libraries show higher dispersion — a reminder that genotype contrasts in stroma-rich tumours must be interpreted alongside composition and QC.</p>
+<p>Mouse-aware deconvolution then links expression space to microenvironment scores, informing whether subsequent differential expression can proceed with a straightforward design matrix or needs composition-aware covariates. The same discipline — check alignment, show each preprocessing step, and explain PCA with biology — scales to other bulk tumour RNA-seq projects.</p>
+<p><em>Source analysis:</em> <code>Pancreatic.R</code> in the <code>pancreatic.cancer.mouse</code> RStudio project (<code>musfira-projects</code>), using GEO accession GSE283652.</p>`,
+  },
+  {
     slug: 'comparative-assessment-of-soil-fertility-geostatistics',
     title: 'Comparative Assessment of Soil Fertility Parameters Using Geostatistical Approaches',
     date: '2026-09-06',
