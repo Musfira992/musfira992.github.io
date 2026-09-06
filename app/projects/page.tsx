@@ -80,7 +80,23 @@ export default function Projects() {
         </p>
         <p className="muted">
           Real-world challenges in improving nutrient use efficiency, and
-          statistical models for quantifying nitrogen responsiveness.
+          statistical models for quantifying nitrogen responsiveness
+          (Chapter&nbsp;2).
+        </p>
+
+        <p>
+          <Link
+            href="/blog/comparative-assessment-of-soil-fertility-geostatistics"
+            className="button"
+          >
+            Comparative Assessment of Soil Fertility Parameters Using
+            Geostatistical Approaches →
+          </Link>
+        </p>
+        <p className="muted">
+          Comparing multiple linear regression with ordinary kriging,
+          cokriging, and regression kriging for mapping soil fertility — and
+          what that means for sampling design (Chapter&nbsp;3).
         </p>
       </div>
     </section>
