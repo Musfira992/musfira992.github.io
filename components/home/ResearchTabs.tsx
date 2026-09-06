@@ -17,8 +17,12 @@ export default function ResearchTabs() {
     <section className={styles.wrap}>
       <h2>Research</h2>
       <p className="lede">
-        A quick tour of the analysis behind this site — RNA-seq, pathway
-        enrichment, and sample structure — with figures you can browse below.
+        Exploratory and confirmatory analyses from transcriptomic workflows —
+        spanning single-cell marker discovery, bulk differential expression, and
+        gene-set enrichment — grounded in the same quantitative discipline I
+        applied to multi-variable crop and molecular datasets in plant biology
+        research. Browse the orbiting figures for pipeline outputs, then open a
+        domain below for the underlying plots and interpretation.
       </p>
 
       <div className={styles.stage} aria-hidden="true">
