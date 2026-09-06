@@ -9,16 +9,11 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <h1>Musfira Jamil</h1>
+          <h1>Hello — glad you&apos;re here</h1>
           <p className="lede">
-            Technical Operations Specialist &amp; Researcher working at the
-            intersection of plant biology, molecular genetics, and data-driven
-            decision making in agriculture and the life sciences.
-          </p>
-          <p style={{ marginTop: '1.5rem' }}>
-            I enable excellence in research and laboratory operations —
-            designing SOPs, training scientists, and turning field and lab data
-            into actionable insight.
+            I&apos;m a Sydney-based data analyst with roots in plant biology and
+            molecular genetics. I turn lab and business data into clear insight
+            — with Power BI, SQL, Python, and a love of tidy process.
           </p>
           <p style={{ marginTop: '2rem' }}>
             <Link className="button" href="/about">
