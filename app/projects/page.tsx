@@ -10,7 +10,7 @@ const researchProjects = [
     title: 'Enhancing Nutrient Use Efficiency for Sustainable Agriculture',
     description:
       'Real-world challenges in improving nutrient use efficiency, and statistical models for quantifying nitrogen responsiveness (Chapter 2).',
-    thumb: '/images/projects/thumb-nue.jpg',
+    thumb: '/images/projects/variable-n-rates-map.jpg',
     thumbAlt: 'Variable nitrogen rate map from NUE field analysis',
   },
   {
@@ -19,7 +19,7 @@ const researchProjects = [
       'Comparative Assessment of Soil Fertility Parameters Using Geostatistical Approaches',
     description:
       'Comparing multiple linear regression with ordinary kriging, cokriging, and regression kriging for mapping soil fertility — and what that means for sampling design (Chapter 3).',
-    thumb: '/images/projects/thumb-soil.jpg',
+    thumb: '/images/projects/management-zones-map.jpg',
     thumbAlt: 'Management zones map from soil fertility geostatistics',
   },
   {
@@ -28,7 +28,7 @@ const researchProjects = [
       'Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution',
     description:
       'Reproducible exploration of GEO GSE283652 — edgeR QC/TMM, PCA, and mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.',
-    thumb: '/images/projects/thumb-rna.jpg',
+    thumb: '/images/research/pca-plot.png',
     thumbAlt: 'PCA plot of GSE283652 Npy1r WT versus KO samples',
   },
 ]
