@@ -1,18 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Serif_Display } from 'next/font/google'
+import { Manrope, Fraunces } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import './globals.css'
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
 })
 
-const dmSerif = DM_Serif_Display({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: '400',
   variable: '--font-display',
   display: 'swap',
 })
@@ -32,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerif.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${fraunces.variable}`}>
       <body>
         <div className="shell">
           <Nav />
