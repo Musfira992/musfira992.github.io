@@ -41,9 +41,13 @@
 }
 
 .more {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  margin: 1.5rem 0 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.more h2 {
+  margin-top: 0;
 }
 
 @media (max-width: 640px) {
