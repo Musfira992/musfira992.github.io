@@ -1,1 +1,1 @@
-{{FILE:/workspace/primer-posts/posts.merged.ts}}
+@/workspace/primer-posts/posts.merged.ts
