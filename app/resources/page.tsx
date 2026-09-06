@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { resourceGroups } from '@/content/resources'
 import styles from './resources.module.css'
 
@@ -12,6 +13,24 @@ export default function Resources() {
         A curated set of tools, databases, and references I rely on across the
         lab, the field, and the analysis pipeline.
       </p>
+
+      <div className={styles.guides}>
+        <h2>Guides &amp; tutorials</h2>
+        <p>
+          <Link
+            href="/blog/chemprop-drug-discovery-on-databricks"
+            className="button"
+          >
+            AI Drug Discovery Made Easy: Your Complete Guide to Chemprop on
+            Databricks →
+          </Link>
+        </p>
+        <p className="muted">
+          Using Chemprop for molecular property prediction as a managed
+          Databricks workflow — from pretrained models to multi-task ADMET
+          regressors.
+        </p>
+      </div>
 
       {resourceGroups.map((group) => (
         <div key={group.category}>
