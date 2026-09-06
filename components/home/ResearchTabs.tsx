@@ -17,12 +17,15 @@ export default function ResearchTabs() {
     <section className={styles.wrap}>
       <h2>Research</h2>
       <p className="lede">
-        Exploratory and confirmatory analyses from transcriptomic workflows —
-        spanning single-cell marker discovery, bulk differential expression, and
-        gene-set enrichment — grounded in the same quantitative discipline I
-        applied to multi-variable crop and molecular datasets in plant biology
-        research. Browse the orbiting figures for pipeline outputs, then open a
-        domain below for the underlying plots and interpretation.
+        From Master&apos;s thesis work on nitrogen use efficiency and
+        geostatistical soil fertility mapping in Central Alberta, to research
+        projects on nutrient responsiveness, spatial interpolation, and mouse
+        PDAC bulk RNA-seq (edgeR QC/TMM, PCA, immune deconvolution) — plus
+        transcriptomic workflows for marker discovery, differential expression,
+        and gene-set enrichment. The same quantitative discipline runs through
+        crop field maps and molecular datasets. Browse the orbiting figures for
+        pipeline outputs, then open a domain below for the underlying plots and
+        interpretation.
       </p>
 
       <div className={styles.stage} aria-hidden="true">
