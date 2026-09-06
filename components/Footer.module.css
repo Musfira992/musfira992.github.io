@@ -1,7 +1,9 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding: 2rem 0;
+  padding: 2.25rem 0;
   font-size: var(--step--1);
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--bg-subtle) 55%, transparent);
 }
 
 .inner {
@@ -16,5 +18,9 @@
   display: flex;
   gap: 1.25rem;
 }
-.links a { color: var(--text-muted); border-bottom: none; }
+.links a {
+  color: var(--text-muted);
+  border-bottom: none;
+  font-weight: 500;
+}
 .links a:hover { color: var(--accent); }
