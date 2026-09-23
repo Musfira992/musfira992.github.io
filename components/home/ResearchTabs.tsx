@@ -15,7 +15,7 @@ export default function ResearchTabs() {
 
  return (
  <section className={styles.wrap}>
- <h2>Research</h2>
+ <h2>Broader research</h2>
  <p className="lede">
  From Master&apos;s thesis work on nitrogen use efficiency and
  geostatistical soil fertility mapping in Central Alberta, to research
