@@ -3,13 +3,26 @@
   grid-template-columns: minmax(0, 1fr) minmax(160px, 230px);
   gap: 2rem 2.75rem;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   padding: 0.25rem 0 0.5rem;
 }
 
 .heroCopy h1 {
   margin-bottom: 0.55em;
   letter-spacing: -0.03em;
+}
+
+.ctaRow {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+}
+
+.textLink {
+  font-weight: 500;
 }
 
 .heroMedia {
@@ -32,6 +45,51 @@
     0 0 0 8px color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
+.narrative {
+  margin-top: 2.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.positioning {
+  font-size: var(--step-0);
+  color: var(--text);
+  max-width: var(--measure);
+  margin-bottom: 0.25rem;
+}
+
+.narrative h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+  font-size: var(--step-1);
+  color: var(--accent);
+  letter-spacing: -0.015em;
+}
+
+.roleList,
+.impactList {
+  margin: 0 0 0.25rem 1.15rem;
+  max-width: var(--measure);
+  padding: 0;
+}
+
+.roleList li,
+.impactList li {
+  margin-bottom: 0.45rem;
+  padding-left: 0.15rem;
+  color: var(--text);
+}
+
+.impactList li {
+  margin-bottom: 0.65rem;
+  line-height: 1.65;
+}
+
+.narrative p {
+  max-width: var(--measure);
+  color: var(--text);
+}
+
 @media (max-width: 700px) {
   .hero {
     grid-template-columns: 1fr;
@@ -41,5 +99,10 @@
   .heroMedia {
     justify-self: start;
     max-width: 180px;
+  }
+
+  .narrative {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
   }
 }
