@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Instrument_Serif } from 'next/font/google'
+import { Inter, IBM_Plex_Serif } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -11,11 +11,11 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
 })
 
-const instrumentSerif = Instrument_Serif({
+const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  weight: '400',
+  weight: ['400', '500', '600'],
 })
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${ibmPlexSerif.variable}`}>
       <body>
         <div className="shell">
           <Nav />

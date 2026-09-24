@@ -31,7 +31,7 @@
 }
 
 .title {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), "IBM Plex Serif", Georgia, serif;
   font-size: var(--step-2);
   color: var(--text);
   border-bottom: none;
