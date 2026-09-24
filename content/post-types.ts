@@ -7,4 +7,6 @@ export type Post = {
   category: PostCategory
   excerpt: string
   html: string
+  thumb?: string
+  thumbAlt?: string
 }
