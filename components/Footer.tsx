@@ -8,6 +8,7 @@ export default function Footer() {
         <span className="muted">© {year} Musfira Jamil</span>
         <span className={styles.links}>
           <a href="https://github.com/Musfira992">GitHub</a>
+          <a href="https://au.linkedin.com/in/musfirajamil">LinkedIn</a>
           <a href="mailto:musfirajamil@gmail.com">Email</a>
         </span>
       </div>
