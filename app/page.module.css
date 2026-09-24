@@ -22,6 +22,7 @@
 }
 
 .textLink {
+  font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -51,19 +52,16 @@
   border-top: 1px solid var(--border);
 }
 
-.positioning {
-  font-size: var(--step-0);
-  color: var(--text);
-  max-width: var(--measure);
-  margin-bottom: 0.25rem;
-}
-
 .narrative h2 {
   margin-top: 1.75rem;
   margin-bottom: 0.6rem;
   font-size: var(--step-1);
   color: var(--accent);
   letter-spacing: -0.015em;
+}
+
+.narrative h2:first-child {
+  margin-top: 0;
 }
 
 .roleList,

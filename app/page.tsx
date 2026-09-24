@@ -39,14 +39,6 @@ export default function Home() {
       </section>
 
       <section className={styles.narrative}>
-        <p className={styles.positioning}>
-          I&apos;m a Technical Operations Specialist and Researcher with a
-          strong background in Plant Biology, Molecular Genetics, and R&amp;D
-          operations. I work towards enabling excellence in research,
-          laboratory operations, and data-driven decision making in agriculture
-          and life sciences.
-        </p>
-
         <h2>I am</h2>
         <ul className={styles.roleList}>
           <li>Plant biologist and molecular geneticist</li>
@@ -58,13 +50,6 @@ export default function Home() {
           </li>
           <li>Continuous improvement advocate and mentor</li>
         </ul>
-
-        <h2>I provide</h2>
-        <p>
-          Support, training, and expertise in molecular biology techniques, crop
-          research operations, laboratory management, statistical modelling, and
-          geospatial analysis for precision agriculture.
-        </p>
 
         <h2>Impact</h2>
         <ul className={styles.impactList}>
