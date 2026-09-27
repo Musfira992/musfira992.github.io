@@ -58,6 +58,31 @@ export const events: SiteEvent[] = [
     href: 'https://www.databricks.com/dataaisummit',
     summary:
       'I attended the Databricks Data + AI Summit to learn how teams design and run modern data and AI platforms. The programme covered lakehouse architecture, data governance, and practical machine learning, with a strong emphasis on turning experimental work into systems people can trust. It was a useful chance to compare those approaches with the analytics and operations problems I see in research and industry, and to note the practices I want to try next.',
-    photos: [],
+    photos: [
+      {
+        src: '/images/events/databricks-data-ai-summit-2026/01.jpg',
+        alt: 'Musfira Jamil with colleagues in front of the Databricks Data + AI Summit 2026 backdrop',
+        width: 1600,
+        height: 1200,
+      },
+      {
+        src: '/images/events/databricks-data-ai-summit-2026/02.jpg',
+        alt: 'Musfira Jamil with a colleague in front of the Data + AI Summit 2026 step-and-repeat',
+        width: 1600,
+        height: 1200,
+      },
+      {
+        src: '/images/events/databricks-data-ai-summit-2026/03.jpg',
+        alt: 'Musfira Jamil with colleagues at the Databricks Data + AI Summit 2026',
+        width: 1600,
+        height: 1200,
+      },
+      {
+        src: '/images/events/databricks-data-ai-summit-2026/04.jpg',
+        alt: 'Musfira Jamil at the Databricks Data + AI Summit 2026, wearing a summit lanyard',
+        width: 1200,
+        height: 1600,
+      },
+    ],
   },
 ]
