@@ -33,9 +33,9 @@ export const events: SiteEvent[] = [
       },
       {
         src: '/images/events/art-of-discovery/02.jpg',
-        alt: 'Musfira Jamil beside a yellow and magenta point-cloud artwork at Art of Discovery',
-        width: 1600,
-        height: 1067,
+        alt: 'Musfira Jamil wearing glasses beside purple and pink microscopy panels at Art of Discovery',
+        width: 1067,
+        height: 1600,
       },
       {
         src: '/images/events/art-of-discovery/03.jpg',
@@ -45,7 +45,7 @@ export const events: SiteEvent[] = [
       },
       {
         src: '/images/events/art-of-discovery/04.jpg',
-        alt: 'Musfira Jamil wearing glasses beside purple and pink microscopy panels at Art of Discovery',
+        alt: 'Musfira Jamil beside a yellow and magenta point-cloud artwork at Art of Discovery',
         width: 1600,
         height: 1067,
       },
@@ -80,6 +80,12 @@ export const events: SiteEvent[] = [
       {
         src: '/images/events/databricks-data-ai-summit-2026/04.jpg',
         alt: 'Musfira Jamil at the Databricks Data + AI Summit 2026, wearing a summit lanyard',
+        width: 1200,
+        height: 1600,
+      },
+      {
+        src: '/images/events/databricks-data-ai-summit-2026/05.jpg',
+        alt: 'Musfira Jamil at Databricks Data + AI Summit 2026',
         width: 1200,
         height: 1600,
       },

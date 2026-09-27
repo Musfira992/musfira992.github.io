@@ -102,9 +102,9 @@
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  object-position: center 30%;
+  object-fit: contain;
+  max-height: 28rem;
+  margin-inline: auto;
   border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
   background: var(--bg-subtle);
