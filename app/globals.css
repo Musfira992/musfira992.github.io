@@ -1,8 +1,8 @@
 :root {
-  /* Warm cream page with white elevated surfaces */
-  --bg: #f8f8f6;
+  /* White page with warm cream nav and elevated surfaces */
+  --bg: #ffffff;
   --bg-subtle: #eeece7;
-  --bg-elevated: #ffffff;
+  --bg-elevated: #f8f8f6;
   --text: #1c1b19;
   --text-muted: #5e615c;
   --border: #e3e1da;

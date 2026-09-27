@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <h1>Hey There 👋</h1>
+          <h1>Welcome!</h1>
           <p className="lede">
             I&apos;m a Sydney-based technologist and researcher with a
             background in plant biology, cancer research, and molecular
@@ -64,44 +64,50 @@ export default function Home() {
         <h2>Impact</h2>
         <ul className={styles.impactList}>
           <li>
-            Led high-volume tissue sampling coordination across early breeding
-            pipeline projects at Bayer Crop Science, collaborating with multiple
-            cross-functional teams to deliver projects on time.
+            At Bayer Crop Science, led high-volume tissue sampling coordination
+            across early breeding pipeline projects, collaborating with
+            cross-functional teams to deliver on time.
           </li>
           <li>
-            Increased workflow efficiency by 15% by implementing a continuous
-            cycling product design strategy.
+            At Bayer Crop Science, increased workflow efficiency by ~15% by
+            implementing a continuous cycling product design strategy.
           </li>
           <li>
-            Optimised and documented SOPs for tissue sampling, enhancing
-            efficiency, reducing errors, and improving quality control under a
-            QMS framework.
+            At Bayer Crop Science, optimised and documented SOPs for tissue
+            sampling under a QMS framework, improving efficiency, reducing
+            errors, and strengthening quality control.
           </li>
           <li>
-            Trained and mentored staff, including teaching 120+ undergraduates
-            in molecular biology techniques and supervising 15 teaching
-            assistants at the University of Alberta.
+            At Bayer Crop Science, presented early breeding operations and
+            tissue sampling workflows to senior leadership and during site
+            tours, supporting cross-functional alignment.
           </li>
           <li>
-            Presented operations and workflows to senior leadership teams and
-            during site tours, fostering cross-functional alignment.
+            At Bayer Crop Science, launched a peer-to-peer mentoring program,
+            recruiting 15+ mentors and organising 30+ one-on-one sessions and
+            workshops.
           </li>
           <li>
-            Launched a peer-to-peer mentoring program at Bayer, recruiting 15+
-            mentors and organising 30+ one-on-one sessions and workshops.
+            At the University of Alberta, taught 120+ undergraduates in
+            molecular biology techniques and supervised 15 teaching assistants
+            in Molecular Genetics and Heredity.
           </li>
           <li>
-            Conducted a Master&apos;s research project on statistical and
-            in-field challenges in quantifying crop nitrogen use efficiency
-            (NUE) and spatial soil fertility in Central Alberta, comparing
-            statistical models (linear, quadratic, piecewise regression) and
-            geostatistical methods (kriging, cokriging, regression kriging) to
-            improve precision agriculture.
+            At the University of Alberta, completed Master&apos;s research on
+            crop nitrogen use efficiency (NUE) and spatial soil fertility in
+            Central Alberta, comparing statistical and geostatistical models
+            for precision agriculture.
           </li>
           <li>
-            Presented research findings at scientific conferences and translated
-            them into actionable recommendations for nutrient management and
-            sustainable agriculture.
+            At the University of Alberta, presented research findings at
+            scientific conferences and translated them into recommendations for
+            nutrient management and sustainable agriculture.
+          </li>
+          <li>
+            At the National Institute for Genomics and Advanced Biotechnology
+            (NARC), provided molecular biology support for GMO laboratory
+            research and led an independent maize transcription-factor project
+            combining in-silico and molecular analyses.
           </li>
         </ul>
       </section>
