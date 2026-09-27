@@ -88,7 +88,7 @@ export const existingPostsA: Post[] = [
  {
  slug: 'how-to-build-explainable-machine-learning-models',
  title: 'How to Build Explainable Machine Learning models?',
- date: '2025-11-18',
+ date: '2025-01-15',
  category: 'blog',
  excerpt:
  'Using the SHAP library to make customer-facing ML predictions interpretable and actionable, and how to evaluate whether explanations actually calibrate user trust.',
@@ -100,7 +100,7 @@ export const existingPostsA: Post[] = [
  {
  slug: 'causal-inference-in-crop-trials',
  title: 'Causal Inference in Crop Trials',
- date: '2025-11-18',
+ date: '2024-09-15',
  category: 'blog',
  excerpt:
  'Some early thoughts on how causal reasoning, going beyond correlation, can help interpret crop trial interventions and predict downstream effects on yield and resilience.',
@@ -112,7 +112,7 @@ export const existingPostsA: Post[] = [
  {
  slug: 'developing-a-work-view',
  title: 'Developing a Work View',
- date: '2025-11-18',
+ date: '2024-05-15',
  category: 'blog',
  excerpt:
  "Notes from Stanford's Designing Your Life course on building a personal 'work view', the hard questions worth asking about specialization, money, ethics, and purpose.",
