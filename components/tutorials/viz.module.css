@@ -2,7 +2,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.25rem;
-  background: #fff;
+  background: var(--bg-elevated);
   margin: 1.75rem 0;
 }
 

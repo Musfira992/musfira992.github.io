@@ -34,7 +34,7 @@
   margin: -75px 0 0 -110px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fff;
+  background: var(--bg-elevated);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   backface-visibility: hidden;
@@ -98,7 +98,7 @@
 .panel {
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fff;
+  background: var(--bg-elevated);
   padding: 1.5rem;
 }
 
