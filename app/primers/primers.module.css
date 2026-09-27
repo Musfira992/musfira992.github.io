@@ -6,7 +6,7 @@
 }
 
 .list li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
   padding-left: 0.25rem;
 }
 
@@ -23,4 +23,9 @@
   color: var(--accent-hover);
   text-decoration-color: var(--accent-hover);
   border-bottom: none;
+}
+
+.hub {
+  margin-top: 1.75rem;
+  font-size: var(--step--1);
 }
