@@ -30,8 +30,8 @@ export default function Home() {
           <Image
             src="/images/hero-portrait.jpg"
             alt="Musfira Jamil"
-            width={640}
-            height={853}
+            width={960}
+            height={1278}
             className={styles.heroImage}
             priority
           />

@@ -7,6 +7,7 @@ const links = [
   { href: '/research', label: 'Research' },
   { href: '/primers', label: 'Primers' },
   { href: '/blog', label: 'Blog Posts' },
+  { href: '/news', label: 'News & Events' },
   { href: '/teaching', label: 'Teaching and Training' },
 ]
 

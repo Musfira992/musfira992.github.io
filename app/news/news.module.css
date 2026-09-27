@@ -1,0 +1,141 @@
+.timeline {
+  list-style: none;
+  margin: 2.75rem 0 0;
+  padding: 0;
+  max-width: none;
+}
+
+.event {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.75rem 1.85rem;
+}
+
+.event:last-child {
+  padding-bottom: 0;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1.35rem;
+  bottom: 0;
+  width: 1px;
+  background: color-mix(in srgb, var(--accent) 32%, var(--border));
+}
+
+.event:last-child::before {
+  display: none;
+}
+
+.event::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 12%, var(--bg));
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem 1.3rem;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.85rem;
+  margin: 0 0 0.35rem;
+  max-width: none;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+}
+
+.meta a {
+  font-weight: 500;
+}
+
+.title {
+  margin: 0 0 0.55rem;
+  font-size: var(--step-2);
+  line-height: 1.2;
+}
+
+.summary {
+  margin: 0;
+  max-width: var(--measure);
+  color: var(--text);
+}
+
+.gallery {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.gallery li {
+  margin: 0;
+  min-width: 0;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
+  background: var(--bg-subtle);
+}
+
+@media (min-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.comingSoon {
+  margin: 0.95rem 0 0;
+  max-width: none;
+  color: var(--text-muted);
+  font-size: var(--step--1);
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .event {
+    padding-left: 1.55rem;
+  }
+
+  .card {
+    padding: 1rem 1rem 1.1rem;
+  }
+}
