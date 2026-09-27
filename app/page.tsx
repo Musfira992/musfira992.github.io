@@ -7,23 +7,33 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <h1>Hello, glad you&apos;re here</h1>
+          <h1>Hey There 👋</h1>
           <p className="lede">
-            Sydney-based technical operations specialist and researcher with
-            roots in plant biology, molecular genetics, and data. I bring
-            transferable operations and analytics experience to public and
-            private sector roles.
+            I&apos;m a Sydney-based technologist and researcher with a
+            background in plant biology, cancer research, and molecular
+            genetics. I bring transferable operations and analytics experience
+            to public and private sector roles.
           </p>
           <p className={styles.ctaRow}>
             <Link className="button" href="/about">
               About me
             </Link>
-            <Link href="/research" className={styles.textLink}>
-              Explore research →
-            </Link>
-            <Link href="/projects" className={styles.textLink}>
-              View projects →
-            </Link>
+            <a
+              className={styles.buttonOutline}
+              href="https://github.com/Musfira992"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className={styles.buttonOutline}
+              href="https://au.linkedin.com/in/musfirajamil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </p>
         </div>
         <div className={styles.heroMedia}>
