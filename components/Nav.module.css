@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.35rem 1.45rem;
+  gap: 0.4rem 2rem;
   flex-wrap: wrap;
 }
 
@@ -50,7 +50,7 @@
 }
 .link:hover { color: var(--accent); border-bottom: none; }
 
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .header .inner {
     flex-direction: column;
     align-items: flex-start;
