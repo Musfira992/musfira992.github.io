@@ -1,5 +1,6 @@
 import { existingPostsA } from './posts-existing-a'
 import { existingPostsB } from './posts-existing-b'
+import { ghostAiPosts } from './posts-ghost-ai'
 import { primerPosts0 } from './posts-primers-0'
 import { primerPosts1 } from './posts-primers-1'
 import { primerPosts2 } from './posts-primers-2'
@@ -15,6 +16,7 @@ export const posts: Post[] = [
   ...primerPosts3,
   ...existingPostsA,
   ...existingPostsB,
+  ...ghostAiPosts,
 ]
 
 export function getPost(slug: string) {
