@@ -1,8 +1,10 @@
-// Add an event at the top of `events` (newest first) and drop photos into public/images/events/<id>/.
+// Add an event at the top of `events` (newest first) and drop photos into public/images/events/<id>/ (src, alt, width, height).
 
 export type EventPhoto = {
   src: string
   alt: string
+  width: number
+  height: number
 }
 
 export type SiteEvent = {
@@ -25,7 +27,27 @@ export const events: SiteEvent[] = [
     photos: [
       {
         src: '/images/events/art-of-discovery/01.jpg',
-        alt: 'Musfira Jamil at the Garvan Art of Discovery exhibition',
+        alt: 'Musfira Jamil at Garvan Art of Discovery, standing before a circular scientific artwork',
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: '/images/events/art-of-discovery/02.jpg',
+        alt: 'Musfira Jamil beside a yellow and magenta point-cloud artwork at Art of Discovery',
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: '/images/events/art-of-discovery/03.jpg',
+        alt: 'Musfira Jamil with arms crossed beside a green fluorescent micrograph at Art of Discovery',
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: '/images/events/art-of-discovery/04.jpg',
+        alt: 'Musfira Jamil wearing glasses beside purple and pink microscopy panels at Art of Discovery',
+        width: 1600,
+        height: 1067,
       },
     ],
   },

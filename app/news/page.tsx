@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { events, type SiteEvent } from '@/content/events'
 import styles from './news.module.css'
 
@@ -41,7 +42,14 @@ function EventGallery({ event }: { event: SiteEvent }) {
     <ul className={styles.gallery}>
       {event.photos.map((photo) => (
         <li key={photo.src}>
-          <img src={photo.src} alt={photo.alt} loading="lazy" />
+          <Image
+            src={photo.src}
+            alt={photo.alt}
+            width={photo.width}
+            height={photo.height}
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+            className={styles.photo}
+          />
         </li>
       ))}
     </ul>
