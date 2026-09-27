@@ -6,6 +6,16 @@ export const metadata: Metadata = { title: 'Projects' }
 
 const researchProjects = [
   {
+    href: '/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration',
+    title:
+      'Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution',
+    description:
+      'Reproducible exploration of GEO GSE283652, edgeR QC/TMM, PCA, and mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.',
+    thumb: '/images/research/pca-plot.png',
+    thumbAlt: 'PCA plot of GSE283652 Npy1r WT versus KO samples',
+  },
+
+  {
     href: '/blog/enhancing-nutrient-use-efficiency-for-sustainable-agriculture',
     title: 'Enhancing Nutrient Use Efficiency for Sustainable Agriculture',
     description:
@@ -13,6 +23,7 @@ const researchProjects = [
     thumb: '/images/projects/variable-n-rates-map.jpg',
     thumbAlt: 'Variable nitrogen rate map from NUE field analysis',
   },
+
   {
     href: '/blog/comparative-assessment-of-soil-fertility-geostatistics',
     title:
@@ -22,15 +33,6 @@ const researchProjects = [
     thumb: '/images/projects/management-zones-map.jpg',
     thumbAlt: 'Management zones map from soil fertility geostatistics',
   },
-  {
-    href: '/blog/mouse-pdac-rnaseq-npy1r-knockout-exploration',
-    title:
-      'Exploring Mouse PDAC RNA-seq: Npy1r Knockout, QC, and Deconvolution',
-    description:
-      'Reproducible exploration of GEO GSE283652, edgeR QC/TMM, PCA, and mouse immune/stromal deconvolution for an Npy1r KO vs WT contrast.',
-    thumb: '/images/research/pca-plot.png',
-    thumbAlt: 'PCA plot of GSE283652 Npy1r WT versus KO samples',
-  },
 ]
 
 export default function Projects() {
@@ -38,15 +40,11 @@ export default function Projects() {
     <section>
       <h1>Projects</h1>
       <p className="lede">
-        Selected research projects across crop science, spatial analysis, and
-        data-driven molecular work. For the Master&apos;s thesis gallery and
-        broader research overview, see the{' '}
-        <Link href="/research">Research</Link> page.
+        Selected research projects across bioinformatics, computational biology,
+        cancer biology, crop science, and spatial analysis.
       </p>
 
       <div className={styles.more}>
-        <h2>Research projects</h2>
-
         <div className={styles.projectList}>
           {researchProjects.map((project) => (
             <article key={project.href} className={styles.projectItem}>
