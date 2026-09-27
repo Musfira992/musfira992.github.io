@@ -1,49 +1,65 @@
 .header {
-  border-bottom: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
-  backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.inner {
+.header .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  gap: 1.5rem 2rem;
+  max-width: 1080px;
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
   flex-wrap: wrap;
 }
 
 .brand {
   font-family: var(--font-display), "IBM Plex Serif", Georgia, serif;
-  font-size: var(--step-1);
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
   letter-spacing: -0.02em;
   color: var(--text);
   border-bottom: none;
+  white-space: nowrap;
 }
 .brand:hover { color: var(--accent); border-bottom: none; }
 
 .nav {
   display: flex;
-  gap: 1.1rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem 2rem;
   flex-wrap: wrap;
 }
 
 .link {
-  color: var(--text-muted);
-  font-size: 0.92rem;
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: -0.01em;
+  line-height: 1.3;
+  letter-spacing: -0.006em;
   border-bottom: none;
-  padding: 0.2rem 0;
+  padding: 0.15rem 0;
+  white-space: nowrap;
 }
 .link:hover { color: var(--accent); border-bottom: none; }
 
-@media (max-width: 540px) {
-  .inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  .nav { gap: 0.9rem; }
+@media (max-width: 920px) {
+  .header .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+  .nav {
+    justify-content: flex-start;
+    gap: 0.45rem 1.05rem;
+  }
 }
