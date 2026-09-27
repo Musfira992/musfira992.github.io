@@ -5,9 +5,9 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/research', label: 'Research' },
-  { href: '/resources', label: 'Resources' },
+  { href: '/primers', label: 'Primers' },
   { href: '/blog', label: 'Blog Posts' },
-    { href: '/teaching', label: 'Teaching and Training' },
+  { href: '/teaching', label: 'Teaching and Training' },
 ]
 
 export default function Nav() {
